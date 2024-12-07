@@ -1,0 +1,73 @@
+﻿@model IEnumerable<DatabaseLayer.SupplierTable>
+
+@{
+    ViewBag.Title = "All Supplier's";
+}
+
+
+<p>
+    @Html.ActionLink("New Supplier", "Create", null, new { @class = "btn btn-success" })
+</p>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">All Supplier's'</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            Supplier
+                        </th>
+                        <th>
+                            Contact No
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            User
+                        </th>
+                        <th>Action's'</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SupplierName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactNo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UserTable.UserName)
+                            </td>
+                            <td class="btn-group">
+                                @Html.ActionLink("Edit", "Edit", new { id = item.SupplierID }, new { @class = "btn btn-primary" })
+
+
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+ 

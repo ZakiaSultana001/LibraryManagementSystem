@@ -1,0 +1,64 @@
+﻿@model IEnumerable<DatabaseLayer.PurchaseTable>
+
+@{
+    ViewBag.Title = "All Purchase's";
+}
+
+<h2>All Purchases</h2>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">User Type </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>
+                         Supplier
+                    </th>
+                    <th>
+                        Purchase Date
+                    </th>
+                    <th>
+                        Purchase Amount
+                    </th>
+
+                    <th>
+                        User
+                    </th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SupplierTable.SupplierName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PurchaseDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PurchaseAmount)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserTable.UserName)
+                        </td>
+                        <td>
+
+                            @Html.ActionLink("Details", "PurchaseDetailsView", new { id = item.PurchaseID }, new { @class = "btn btn-info" }) |
+
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0eee1a7c0644442c9dab09dc1a295c91" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.BookFineTable" Width="1.5" PointX="9.75" PointY="19.875" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.BookTable" Width="1.5" PointX="10.5" PointY="24" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.BookTypeTable" Width="1.5" PointX="5.25" PointY="32.875" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.DepartmentTable" Width="1.5" PointX="5.25" PointY="14.125" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.Designation_Table" Width="1.5" PointX="5.25" PointY="30" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.EmployeeTable" Width="1.5" PointX="7.5" PointY="21" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.IssueBookTable" Width="1.5" PointX="12.75" PointY="21.5" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.PurchaseDetailTable" Width="1.5" PointX="12.75" PointY="26.375" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.PurchaseTable" Width="1.5" PointX="7.5" PointY="26.625" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.PurTemDetailsTable" Width="1.5" PointX="12.75" PointY="36.625" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.SupplierTable" Width="1.5" PointX="5.25" PointY="35.625" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.UserTable" Width="1.5" PointX="3" PointY="17.5" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.UserTypeTable" Width="1.5" PointX="0.75" PointY="18.875" />
+        <EntityTypeShape EntityType="OnlineLibraryMgtSystemDbModel.BookReturnTable" Width="1.5" PointX="15.75" PointY="21.75" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_BookFineTable_BookTable1" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_BookFineTable_EmployeeTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_BookFineTable_UserTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_BookReturnTable_BookTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_BookTable_BookTypeTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_BookTable_DepartmentTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_BookTable_UserTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_IssueBookTable_BookTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_PurchaseDetailTable_BookTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_PurTemDetailsTable_BookTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_BookTypeTable_UserTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_DepartmentTable_UserTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_EmployeeTable_DepartmentTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_Designation_Table_UserTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_EmployeeTable_Designation_Table" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_BookReturnTable_EmployeeTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_IssueBookTable_EmployeeTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_UserTable_EmployeeTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_IssueBookTable_UserTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_PurchaseDetailTable_PurchaseTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_PurchaseTable_SupplierTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_PurchaseTable_UserTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_SupplierTable_UserTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_BookReturnTable_UserTable" />
+        <AssociationConnector Association="OnlineLibraryMgtSystemDbModel.FK_UserTable_UserTypeTable" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
